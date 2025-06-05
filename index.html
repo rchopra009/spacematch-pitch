@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceMatch: The Complete Commercial Real Estate Ecosystem</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            color: #ffffff;
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .section-bg {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(79, 172, 254, 0.3);
+        }
+        .chart-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+        }
+        .glow-effect {
+            box-shadow: 0 0 30px rgba(79, 172, 254, 0.5);
+        }
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+    </style>
+</head>
+<body class="text-white">
+    <div class="min-h-screen">
+        
+        <!-- Title Section -->
+        <section class="relative py-20 px-8">
+            <div class="max-w-6xl mx-auto text-center">
+                <div class="mb-8">
+                    <h1 class="text-8xl font-black mb-6 gradient-text">SPACEMATCH</h1>
+                    <p class="text-4xl font-bold text-blue-300 mb-4">The Complete Commercial Real Estate Ecosystem</p>
+                    <p class="text-xl text-gray-300 mb-8">Transforming India's ₹15B+ Commercial Real Estate Market Through AI-Native Intelligence</p>
+                </div>
+                <div class="flex justify-center items-center space-x-8 text-sm text-gray-400">
+                    <div><i class="fas fa-calendar mr-2"></i>Presented to BlackRock Leadership</div>
+                    <div><i class="fas fa-map-marker-alt mr-2"></i>Global Headquarters</div>
+                    <div><i class="fas fa-clock mr-2"></i>December 2024</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Statement -->
+        <section class="py-16 px-8">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-5xl font-bold mb-12 text-center">THE <span class="gradient-text">₹15B PROBLEM</span></h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="section-bg rounded-2xl p-8 card-hover">
+                        <h3 class="text-2xl font-bold mb-6 text-red-400"><i class="fas fa-exclamation-triangle mr-3"></i>For Businesses</h3>
+                        <ul class="space-y-4 text-lg">
+                            <li><i class="fas fa-times-circle text-red-500 mr-3"></i>60+ days to find suitable commercial space</li>
+                            <li><i class="fas fa-times-circle text-red-500 mr-3"></i>70% of listings are outdated or irrelevant</li>
+                            <li><i class="fas fa-times-circle text-red-500 mr-3"></i>30+ documents required for transactions</li>
+                            <li><i class="fas fa-times-circle text-red-500 mr-3"></i>8-12 different vendors for complete process</li>
+                            <li><i class="fas fa-times-circle text-red-500 mr-3"></i>₹2-5L in transaction fees</li>
+                        </ul>
+                    </div>
+                    <div class="section-bg rounded-2xl p-8 card-hover">
+                        <h3 class="text-2xl font-bold mb-6 text-red-400"><i class="fas fa-user-tie mr-3"></i>For Agents</h3>
+                        <ul class="space-y-4 text-lg">
+                            <li><i class="fas fa-times-circle text-red-500 mr-3"></i>No exclusive listings - compete on equal footing</li>
+                            <li><i class="fas fa-times-circle text-red-500 mr-3"></i>95% of leads are unqualified time-wasters</li>
+                            <li><i class="fas fa-times-circle text-red-500 mr-3"></i>Manual listing creation takes 3-4 hours</li>
+                            <li><i class="fas fa-times-circle text-red-500 mr-3"></i>Fragmented tools: CRM + Discovery + Legal</li>
+                            <li><i class="fas fa-times-circle text-red-500 mr-3"></i>5% average conversion rate</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <div class="inline-block section-bg rounded-2xl px-8 py-6 glow-effect">
+                        <h3 class="text-3xl font-bold text-yellow-400 mb-2">MARKET IMPACT</h3>
+                        <p class="text-xl">₹2B+ Lost Annually in Inefficiencies</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3-Segment Solution -->
+        <section class="py-16 px-8">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-5xl font-bold mb-12 text-center">OUR <span class="gradient-text">3-PILLAR SOLUTION</span></h2>
+                
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <!-- Traditional Commercial -->
+                    <div class="section-bg rounded-2xl p-8 card-hover">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-building text-6xl text-blue-400 mb-4"></i>
+                            <h3 class="text-2xl font-bold">Traditional Commercial</h3>
+                            <p class="text-blue-300 font-semibold">60% of Revenue</p>
+                        </div>
+                        <ul class="space-y-3 text-sm">
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Office Buildings (Class A, B, C)</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Retail Spaces & Showrooms</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Warehouses & Logistics</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Specialized Spaces</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>3-9 Year Leases</li>
+                        </ul>
+                        <div class="mt-6 p-4 bg-blue-900/30 rounded-lg">
+                            <p class="text-center font-bold text-lg">₹8 Cr Market Size</p>
+                            <p class="text-center text-sm text-gray-300">₹50L-5Cr Average Deal</p>
+                        </div>
+                    </div>
+
+                    <!-- Co-working Spaces -->
+                    <div class="section-bg rounded-2xl p-8 card-hover glow-effect">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-users text-6xl text-green-400 mb-4 pulse-animation"></i>
+                            <h3 class="text-2xl font-bold">Flexible Co-working</h3>
+                            <p class="text-green-300 font-semibold">25% of Revenue</p>
+                        </div>
+                        <ul class="space-y-3 text-sm">
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Hot Desks (₹5K-8K/month)</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Dedicated Desks (₹8K-12K)</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Private Cabins (₹15K-25K)</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Team Spaces (₹20K-40K)</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Monthly Flexibility</li>
+                        </ul>
+                        <div class="mt-6 p-4 bg-green-900/30 rounded-lg">
+                            <p class="text-center font-bold text-lg">₹3 Cr Market Size</p>
+                            <p class="text-center text-sm text-gray-300">25% YoY Growth</p>
+                        </div>
+                    </div>
+
+                    <!-- Independent Offices -->
+                    <div class="section-bg rounded-2xl p-8 card-hover">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-landmark text-6xl text-purple-400 mb-4"></i>
+                            <h3 class="text-2xl font-bold">Independent Offices</h3>
+                            <p class="text-purple-300 font-semibold">15% of Revenue</p>
+                        </div>
+                        <ul class="space-y-3 text-sm">
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Small Offices (200-1K sq ft)</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Medium Offices (1K-5K sq ft)</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Large Offices (5K+ sq ft)</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Corporate HQs (10K+ sq ft)</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>5-9 Year Security</li>
+                        </ul>
+                        <div class="mt-6 p-4 bg-purple-900/30 rounded-lg">
+                            <p class="text-center font-bold text-lg">₹4 Cr Market Size</p>
+                            <p class="text-center text-sm text-gray-300">₹25L-10Cr Deals</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <div class="inline-block section-bg rounded-2xl px-12 py-8 glow-effect">
+                        <h3 class="text-4xl font-bold gradient-text mb-4">TOTAL ADDRESSABLE MARKET</h3>
+                        <p class="text-6xl font-black text-yellow-400">₹15 CRORE+</p>
+                        <p class="text-xl text-gray-300 mt-2">NCR Commercial Real Estate Market</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Agent Incentivization Breakthrough -->
+        <section class="py-16 px-8">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-5xl font-bold mb-12 text-center"><span class="gradient-text">BREAKTHROUGH:</span> PRIORITY LEAD SYSTEM</h2>
+                
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-6 text-yellow-400">The India Challenge</h3>
+                        <div class="space-y-4 text-lg">
+                            <p><i class="fas fa-exclamation-triangle text-red-500 mr-3"></i><strong>No Exclusive Listings:</strong> "First to bring client gets commission" culture</p>
+                            <p><i class="fas fa-exclamation-triangle text-red-500 mr-3"></i><strong>Equal Competition:</strong> Agents compete on same footing everywhere</p>
+                            <p><i class="fas fa-exclamation-triangle text-red-500 mr-3"></i><strong>Platform Apathy:</strong> Why use another listing site?</p>
+                        </div>
+                    </div>
+                    
+                    <div class="section-bg rounded-2xl p-8">
+                        <h3 class="text-3xl font-bold mb-6 text-green-400">Our Solution</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center p-4 bg-green-900/30 rounded-lg">
+                                <i class="fas fa-crown text-yellow-400 text-2xl mr-4"></i>
+                                <div>
+                                    <h4 class="font-bold">First-Claim Priority</h4>
+                                    <p class="text-sm text-gray-300">First agent to claim property gets priority on all leads</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center p-4 bg-blue-900/30 rounded-lg">
+                                <i class="fas fa-robot text-blue-400 text-2xl mr-4"></i>
+                                <div>
+                                    <h4 class="font-bold">AI-Qualified Leads</h4>
+                                    <p class="text-sm text-gray-300">Only serious buyers reach agents (3-5x conversion)</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center p-4 bg-purple-900/30 rounded-lg">
+                                <i class="fas fa-lightning-bolt text-purple-400 text-2xl mr-4"></i>
+                                <div>
+                                    <h4 class="font-bold">Performance Tiers</h4>
+                                    <p class="text-sm text-gray-300">Better agents get better placement and features</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <div class="inline-block section-bg rounded-2xl px-8 py-6">
+                        <h3 class="text-2xl font-bold mb-4">RESULT: Agents WANT to Use Our Platform</h3>
+                        <div class="flex justify-center space-x-8">
+                            <div class="text-center">
+                                <p class="text-3xl font-bold text-green-400">25-35%</p>
+                                <p class="text-sm">Conversion Rate</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-3xl font-bold text-blue-400">85%</p>
+                                <p class="text-sm">Time Savings</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-3xl font-bold text-yellow-400">3-5x</p>
+                                <p class="text-sm">Lead Quality</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI-Native Platform Architecture -->
+        <section class="py-16 px-8">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-5xl font-bold mb-12 text-center"><span class="gradient-text">AI-NATIVE</span> PLATFORM ARCHITECTURE</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="section-bg rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold mb-6 text-blue-400"><i class="fas fa-brain mr-3"></i>Multi-Agent AI System</h3>
+                        <div class="space-y-4">
+                            <div class="p-4 bg-blue-900/20 rounded-lg">
+                                <h4 class="font-bold mb-2">Agent 1: Data Discovery</h4>
+                                <p class="text-sm text-gray-300">Scrapes 50+ property sources, extracts structured data using GPT-4V</p>
+                            </div>
+                            <div class="p-4 bg-green-900/20 rounded-lg">
+                                <h4 class="font-bold mb-2">Agent 2: Data Validation</h4>
+                                <p class="text-sm text-gray-300">Cross-references with Google Maps, detects duplicates and fraud</p>
+                            </div>
+                            <div class="p-4 bg-purple-900/20 rounded-lg">
+                                <h4 class="font-bold mb-2">Agent 3: Market Intelligence</h4>
+                                <p class="text-sm text-gray-300">Price trend analysis, demand forecasting, competitive insights</p>
+                            </div>
+                            <div class="p-4 bg-yellow-900/20 rounded-lg">
+                                <h4 class="font-bold mb-2">Agent 4: Lead Matching</h4>
+                                <p class="text-sm text-gray-300">AI-powered property matching, automated follow-up sequences</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="section-bg rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold mb-6 text-green-400"><i class="fas fa-cogs mr-3"></i>Integrated CRM + Transaction</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center p-3 bg-gray-800/50 rounded-lg">
+                                <i class="fas fa-search text-blue-400 mr-3"></i>
+                                <span>AI Discovery → Instant Lead Capture</span>
+                            </div>
+                            <div class="flex items-center p-3 bg-gray-800/50 rounded-lg">
+                                <i class="fas fa-database text-green-400 mr-3"></i>
+                                <span>Built-in CRM with Automated Workflows</span>
+                            </div>
+                            <div class="flex items-center p-3 bg-gray-800/50 rounded-lg">
+                                <i class="fas fa-file-contract text-purple-400 mr-3"></i>
+                                <span>Legal Documents + Digital Signatures</span>
+                            </div>
+                            <div class="flex items-center p-3 bg-gray-800/50 rounded-lg">
+                                <i class="fas fa-money-bill-wave text-yellow-400 mr-3"></i>
+                                <span>Financial Services + Deal Closure</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 p-4 bg-green-900/30 rounded-lg text-center">
+                            <h4 class="font-bold text-lg mb-2">Platform Advantage</h4>
+                            <p class="text-sm">ONE Platform vs 8-12 Separate Vendors</p>
+                            <p class="text-2xl font-bold text-green-400 mt-2">60% Cost Reduction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Financial Projections -->
+        <section class="py-16 px-8">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-5xl font-bold mb-12 text-center">PATH TO <span class="gradient-text">₹135 CRORE</span></h2>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <!-- Revenue Chart -->
+                    <div class="chart-container">
+                        <h3 class="text-2xl font-bold mb-4 text-center">Revenue Growth Trajectory</h3>
+                        <canvas id="revenueChart" width="400" height="300"></canvas>
+                    </div>
+                    
+                    <!-- Segment Revenue -->
+                    <div class="chart-container">
+                        <h3 class="text-2xl font-bold mb-4 text-center">Revenue by Segment (Year 3)</h3>
+                        <canvas id="segmentChart" width="400" height="300"></canvas>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="section-bg rounded-2xl p-6 text-center">
+                        <h3 class="text-xl font-bold mb-4 text-yellow-400">Year 1</h3>
+                        <p class="text-3xl font-bold mb-2">₹10.5 Cr</p>
+                        <div class="text-sm space-y-1">
+                            <p>500 Agent Subscribers</p>
+                            <p>2,000 Properties</p>
+                            <p>Break-even: Month 8</p>
+                        </div>
+                    </div>
+                    <div class="section-bg rounded-2xl p-6 text-center glow-effect">
+                        <h3 class="text-xl font-bold mb-4 text-green-400">Year 2</h3>
+                        <p class="text-3xl font-bold mb-2">₹44 Cr</p>
+                        <div class="text-sm space-y-1">
+                            <p>1,500 Agent Subscribers</p>
+                            <p>8,000 Properties</p>
+                            <p>NCR Market Leadership</p>
+                        </div>
+                    </div>
+                    <div class="section-bg rounded-2xl p-6 text-center">
+                        <h3 class="text-xl font-bold mb-4 text-blue-400">Year 3</h3>
+                        <p class="text-3xl font-bold mb-2">₹135 Cr</p>
+                        <div class="text-sm space-y-1">
+                            <p>4,000 Agent Subscribers</p>
+                            <p>20,000+ Properties</p>
+                            <p>Multi-city Expansion</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center">
+                    <div class="inline-block section-bg rounded-2xl px-8 py-6">
+                        <h3 class="text-2xl font-bold mb-4">Key Metrics</h3>
+                        <div class="grid grid-cols-3 gap-8">
+                            <div>
+                                <p class="text-2xl font-bold text-green-400">89%</p>
+                                <p class="text-sm">Gross Margin</p>
+                            </div>
+                            <div>
+                                <p class="text-2xl font-bold text-blue-400">₹2.5L</p>
+                                <p class="text-sm">Agent LTV</p>
+                            </div>
+                            <div>
+                                <p class="text-2xl font-bold text-yellow-400">43%</p>
+                                <p class="text-sm">YoY Growth</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Founding Team -->
+        <section class="py-16 px-8">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-5xl font-bold mb-12 text-center"><span class="gradient-text">FOUNDING TEAM</span></h2>
+                
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="section-bg rounded-2xl p-8 card-hover">
+                        <div class="text-center mb-6">
+                            <div class="w-32 h-32 mx-auto mb-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                                <i class="fas fa-user-tie text-4xl text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold">Rohit Chopra</h3>
+                            <p class="text-blue-300 font-semibold">Co-Founder & CTO</p>
+                        </div>
+                        <div class="space-y-3 text-sm">
+                            <p><i class="fas fa-graduation-cap text-blue-400 mr-2"></i><strong>Harvard University</strong> educated technology leader</p>
+                            <p><i class="fas fa-briefcase text-green-400 mr-2"></i><strong>20+ years</strong> Fortune 500 & startup experience</p>
+                            <p><i class="fas fa-brain text-purple-400 mr-2"></i><strong>AI transformation expert</strong> for Indian markets</p>
+                            <p><i class="fas fa-cogs text-yellow-400 mr-2"></i><strong>Specializes</strong> in scalable solution architecture</p>
+                            <p><i class="fas fa-chart-line text-red-400 mr-2"></i><strong>Business process optimization</strong> and automation</p>
+                        </div>
+                        <div class="mt-6 p-4 bg-blue-900/30 rounded-lg">
+                            <p class="text-center font-bold">Technology Innovation + Strategic Insight</p>
+                        </div>
+                    </div>
+                    
+                    <div class="section-bg rounded-2xl p-8 card-hover">
+                        <div class="text-center mb-6">
+                            <div class="w-32 h-32 mx-auto mb-4 bg-gradient-to-r from-green-500 to-yellow-600 rounded-full flex items-center justify-center">
+                                <i class="fas fa-building text-4xl text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold">Hitesh Sahni</h3>
+                            <p class="text-green-300 font-semibold">Co-Founder & CEO</p>
+                        </div>
+                        <div class="space-y-3 text-sm">
+                            <p><i class="fas fa-crown text-yellow-400 mr-2"></i><strong>Visionary leader</strong> of HSN Group business conglomerate</p>
+                            <p><i class="fas fa-building text-blue-400 mr-2"></i><strong>Extensive experience</strong> in Commercial Real Estate</p>
+                            <p><i class="fas fa-users text-green-400 mr-2"></i><strong>Co-working Spaces</strong> and Office Interior Projects</p>
+                            <p><i class="fas fa-shopping-cart text-purple-400 mr-2"></i><strong>E-commerce expertise</strong> across diverse sectors</p>
+                            <p><i class="fas fa-handshake text-red-400 mr-2"></i><strong>Strategic foresight</strong> and ethical growth advocate</p>
+                        </div>
+                        <div class="mt-6 p-4 bg-green-900/30 rounded-lg">
+                            <p class="text-center font-bold">Market Access + Industry Credibility</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center">
+                    <div class="inline-block section-bg rounded-2xl px-12 py-8 glow-effect">
+                        <h3 class="text-3xl font-bold gradient-text mb-4">PERFECT FOUNDER-MARKET FIT</h3>
+                        <p class="text-xl mb-4">Technology Excellence + Real Estate Domain Expertise</p>
+                        <div class="flex justify-center space-x-8 text-sm">
+                            <div><i class="fas fa-check text-green-400 mr-2"></i>Harvard AI Leadership</div>
+                            <div><i class="fas fa-check text-green-400 mr-2"></i>HSN Group Network</div>
+                            <div><i class="fas fa-check text-green-400 mr-2"></i>Immediate Market Credibility</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 30-Day Prototype Roadmap -->
+        <section class="py-16 px-8">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-5xl font-bold mb-12 text-center"><span class="gradient-text">30-DAY</span> PROTOTYPE ROADMAP</h2>
+                
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="section-bg rounded-2xl p-6 card-hover">
+                        <div class="text-center mb-4">
+                            <div class="w-16 h-16 mx-auto mb-3 bg-blue-500 rounded-full flex items-center justify-center">
+                                <span class="text-2xl font-bold">1</span>
+                            </div>
+                            <h3 class="text-xl font-bold">Week 1</h3>
+                            <p class="text-blue-300">Mega Database</p>
+                        </div>
+                        <ul class="space-y-2 text-sm">
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>10,000+ NCR Listings</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>AI Segment Classification</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Multi-agent Scraping</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Agent "Claim" System</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="section-bg rounded-2xl p-6 card-hover">
+                        <div class="text-center mb-4">
+                            <div class="w-16 h-16 mx-auto mb-3 bg-green-500 rounded-full flex items-center justify-center">
+                                <span class="text-2xl font-bold">2</span>
+                            </div>
+                            <h3 class="text-xl font-bold">Week 2</h3>
+                            <p class="text-green-300">Segment CRM</p>
+                        </div>
+                        <ul class="space-y-2 text-sm">
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Segment-Specific Pipelines</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Co-working Booking System</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Lead Qualification AI</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>WhatsApp Integration</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="section-bg rounded-2xl p-6 card-hover">
+                        <div class="text-center mb-4">
+                            <div class="w-16 h-16 mx-auto mb-3 bg-purple-500 rounded-full flex items-center justify-center">
+                                <span class="text-2xl font-bold">3</span>
+                            </div>
+                            <h3 class="text-xl font-bold">Week 3</h3>
+                            <p class="text-purple-300">User Experience</p>
+                        </div>
+                        <ul class="space-y-2 text-sm">
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Business Search Interface</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Agent Dashboards</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Real-time Notifications</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Performance Analytics</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="section-bg rounded-2xl p-6 card-hover glow-effect">
+                        <div class="text-center mb-4">
+                            <div class="w-16 h-16 mx-auto mb-3 bg-yellow-500 rounded-full flex items-center justify-center">
+                                <span class="text-2xl font-bold">4</span>
+                            </div>
+                            <h3 class="text-xl font-bold">Week 4</h3>
+                            <p class="text-yellow-300">Full Integration</p>
+                        </div>
+                        <ul class="space-y-2 text-sm">
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Document Automation</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Financial Services</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>Digital Signatures</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i>End-to-End Testing</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center">
+                    <div class="inline-block section-bg rounded-2xl px-8 py-6">
+                        <h3 class="text-2xl font-bold mb-4">Prototype Deliverables</h3>
+                        <div class="grid grid-cols-3 gap-6 text-sm">
+                            <div>
+                                <p class="text-xl font-bold text-blue-400">25</p>
+                                <p>Beta Agents</p>
+                            </div>
+                            <div>
+                                <p class="text-xl font-bold text-green-400">100</p>
+                                <p>Business Users</p>
+                            </div>
+                            <div>
+                                <p class="text-xl font-bold text-yellow-400">15%</p>
+                                <p>Conversion Rate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Competitive Moats -->
+        <section class="py-16 px-8">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-5xl font-bold mb-12 text-center"><span class="gradient-text">COMPETITIVE MOATS</span></h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-6">
+                        <div class="section-bg rounded-2xl p-6 card-hover">
+                            <h3 class="text-xl font-bold mb-3 text-blue-400"><i class="fas fa-shield-alt mr-3"></i>Technology Moat</h3>
+                            <ul class="space-y-2 text-sm">
+                                <li><i class="fas fa-check text-green-400 mr-2"></i>Multi-agent AI system (6+ month head start)</li>
+                                <li><i class="fas fa-check text-green-400 mr-2"></i>Proprietary commercial property dataset</li>
+                                <li><i class="fas fa-check text-green-400 mr-2"></i>AI-powered document automation</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="section-bg rounded-2xl p-6 card-hover">
+                            <h3 class="text-xl font-bold mb-3 text-green-400"><i class="fas fa-network-wired mr-3"></i>Network Moat</h3>
+                            <ul class="space-y-2 text-sm">
+                                <li><i class="fas fa-check text-green-400 mr-2"></i>HSN Group's existing relationships</li>
+                                <li><i class="fas fa-check text-green-400 mr-2"></i>First-mover in agent incentivization</li>
+                                <li><i class="fas fa-check text-green-400 mr-2"></i>Viral business adoption (free model)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="section-bg rounded-2xl p-6 card-hover">
+                            <h3 class="text-xl font-bold mb-3 text-purple-400"><i class="fas fa-database mr-3"></i>Data Moat</h3>
+                            <ul class="space-y-2 text-sm">
+                                <li><i class="fas fa-check text-green-400 mr-2"></i>Comprehensive property database</li>
+                                <li><i class="fas fa-check text-green-400 mr-2"></i>Real-time market intelligence</li>
+                                <li><i class="fas fa-check text-green-400 mr-2"></i>Transaction history and trends</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="section-bg rounded-2xl p-6 card-hover">
+                            <h3 class="text-xl font-bold mb-3 text-yellow-400"><i class="fas fa-cog mr-3"></i>Integration Moat</h3>
+                            <ul class="space-y-2 text-sm">
+                                <li><i class="fas fa-check text-green-400 mr-2"></i>Single platform vs 8-12 vendors</li>
+                                <li><i class="fas fa-check text-green-400 mr-2"></i>High switching costs</li>
+                                <li><i class="fas fa-check text-green-400 mr-2"></i>Complete workflow dependency</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="section-bg rounded-2xl p-6 card-hover">
+                            <h3 class="text-xl font-bold mb-3 text-red-400"><i class="fas fa-rocket mr-3"></i>Execution Moat</h3>
+                            <ul class="space-y-2 text-sm">
+                                <li><i class="fas fa-check text-green-400 mr-2"></i>Proven founding team</li>
+                                <li><i class="fas fa-check text-green-400 mr-2"></i>Technology + domain expertise</li>
+                                <li><i class="fas fa-check text-green-400 mr-2"></i>Immediate market credibility</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="section-bg rounded-2xl p-6 card-hover glow-effect">
+                            <h3 class="text-xl font-bold mb-3 text-cyan-400"><i class="fas fa-globe mr-3"></i>Scale Moat</h3>
+                            <ul class="space-y-2 text-sm">
+                                <li><i class="fas fa-check text-green-400 mr-2"></i>Replicable across Indian metros</li>
+                                <li><i class="fas fa-check text-green-400 mr-2"></i>International expansion ready</li>
+                                <li><i class="fas fa-check text-green-400 mr-2"></i>Technology platform scalability</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center">
+                    <div class="inline-block section-bg rounded-2xl px-12 py-8 glow-effect">
+                        <h3 class="text-3xl font-bold gradient-text mb-4">BARRIERS TO ENTRY</h3>
+                        <p class="text-xl mb-4">Competitors Would Need:</p>
+                        <div class="grid grid-cols-2 gap-8 text-sm">
+                            <div>
+                                <p class="text-2xl font-bold text-red-400">3+ Years</p>
+                                <p>Development Time</p>
+                            </div>
+                            <div>
+                                <p class="text-2xl font-bold text-red-400">₹50+ Cr</p>
+                                <p>Investment Required</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Future Roadmap -->
+        <section class="py-16 px-8">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-5xl font-bold mb-12 text-center"><span class="gradient-text">FUTURE ROADMAP</span></h2>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="section-bg rounded-2xl p-6">
+                        <h3 class="text-2xl font-bold mb-4 text-green-400">Phase 3: Smart Buildings</h3>
+                        <p class="text-sm text-gray-300 mb-4">Years 3-4: When Market Leadership is Achieved</p>
+                        <ul class="space-y-2 text-sm">
+                            <li><i class="fas fa-wifi text-blue-400 mr-2"></i>IoT Sensor Integration</li>
+                            <li><i class="fas fa-eye text-green-400 mr-2"></i>Real-time Occupancy Data</li>
+                            <li><i class="fas fa-thermometer-half text-yellow-400 mr-2"></i>Air Quality Monitoring</li>
+                            <li><i class="fas fa-bolt text-purple-400 mr-2"></i>Energy Optimization</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="section-bg rounded-2xl p-6 glow-effect">
+                        <h3 class="text-2xl font-bold mb-4 text-blue-400">Phase 4: VR/AR Experience</h3>
+                        <p class="text-sm text-gray-300 mb-4">Years 4-5: Technology Maturation</p>
+                        <ul class="space-y-2 text-sm">
+                            <li><i class="fas fa-vr-cardboard text-blue-400 mr-2"></i>360° Virtual Reality Tours</li>
+                            <li><i class="fas fa-cube text-green-400 mr-2"></i>Virtual Space Planning</li>
+                            <li><i class="fas fa-handshake text-yellow-400 mr-2"></i>Virtual Property Meetings</li>
+                            <li><i class="fas fa-magic text-purple-400 mr-2"></i>AI Virtual Staging</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="section-bg rounded-2xl p-6">
+                        <h3 class="text-2xl font-bold mb-4 text-purple-400">Phase 5: Global Expansion</h3>
+                        <p class="text-sm text-gray-300 mb-4">Years 5+: International Markets</p>
+                        <ul class="space-y-2 text-sm">
+                            <li><i class="fas fa-globe text-blue-400 mr-2"></i>Southeast Asia Markets</li>
+                            <li><i class="fas fa-building text-green-400 mr-2"></i>White-label Platform</li>
+                            <li><i class="fas fa-coins text-yellow-400 mr-2"></i>Global Real Estate Index</li>
+                            <li><i class="fas fa-satellite text-purple-400 mr-2"></i>Cross-border Investments</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center">
+                    <div class="inline-block section-bg rounded-2xl px-8 py-6">
+                        <h3 class="text-2xl font-bold mb-4">Expansion Timeline</h3>
+                        <div class="flex justify-center space-x-8">
+                            <div class="text-center">
+                                <p class="text-2xl font-bold text-green-400">₹50+ Cr</p>
+                                <p class="text-sm">Revenue Trigger</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-2xl font-bold text-blue-400">80%+</p>
+                                <p class="text-sm">Market Share</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-2xl font-bold text-purple-400">₹100+ Cr</p>
+                                <p class="text-sm">Infrastructure Investment</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BlackRock Strategic Fit -->
+        <section class="py-16 px-8">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-5xl font-bold mb-12 text-center"><span class="gradient-text">BLACKROCK</span> STRATEGIC FIT</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="section-bg rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold mb-6 text-blue-400"><i class="fas fa-chart-line mr-3"></i>Real Estate Intelligence</h3>
+                        <ul class="space-y-3">
+                            <li><i class="fas fa-eye text-green-400 mr-3"></i>Market insights for BlackRock portfolio</li>
+                            <li><i class="fas fa-stream text-blue-400 mr-3"></i>Deal flow visibility and analytics</li>
+                            <li><i class="fas fa-search text-purple-400 mr-3"></i>Investment opportunity identification</li>
+                            <li><i class="fas fa-brain text-yellow-400 mr-3"></i>Predictive market analytics</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="section-bg rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold mb-6 text-green-400"><i class="fas fa-building mr-3"></i>Portfolio Enhancement</h3>
+                        <ul class="space-y-3">
+                            <li><i class="fas fa-optimize text-green-400 mr-3"></i>Optimize BlackRock's commercial properties</li>
+                            <li><i class="fas fa-users text-blue-400 mr-3"></i>Improve tenant acquisition and retention</li>
+                            <li><i class="fas fa-dollar-sign text-purple-400 mr-3"></i>Data-driven pricing strategies</li>
+                            <li><i class="fas fa-cogs text-yellow-400 mr-3"></i>Operational efficiency improvements</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="section-bg rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold mb-6 text-purple-400"><i class="fas fa-leaf mr-3"></i>ESG Impact</h3>
+                        <ul class="space-y-3">
+                            <li><i class="fas fa-transparency text-green-400 mr-3"></i>Market transparency and efficiency</li>
+                            <li><i class="fas fa-recycle text-blue-400 mr-3"></i>Reduced environmental waste</li>
+                            <li><i class="fas fa-digital-tachograph text-purple-400 mr-3"></i>Supporting digital transformation</li>
+                            <li><i class="fas fa-emerging text-yellow-400 mr-3"></i>Emerging markets development</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="section-bg rounded-2xl p-8 glow-effect">
+                        <h3 class="text-2xl font-bold mb-6 text-yellow-400"><i class="fas fa-globe mr-3"></i>Global Expansion</h3>
+                        <ul class="space-y-3">
+                            <li><i class="fas fa-world text-green-400 mr-3"></i>Proven model for emerging markets</li>
+                            <li><i class="fas fa-strategy text-blue-400 mr-3"></i>Platform for international RE strategy</li>
+                            <li><i class="fas fa-network text-purple-400 mr-3"></i>Cross-border investment facilitation</li>
+                            <li><i class="fas fa-data text-yellow-400 mr-3"></i>Global real estate data insights</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center">
+                    <div class="inline-block section-bg rounded-2xl px-12 py-8 glow-effect">
+                        <h3 class="text-3xl font-bold gradient-text mb-4">INVESTMENT OPPORTUNITY</h3>
+                        <p class="text-xl mb-4">The Salesforce of Commercial Real Estate</p>
+                        <div class="flex justify-center space-x-8">
+                            <div class="text-center">
+                                <p class="text-2xl font-bold text-green-400">10-15x</p>
+                                <p class="text-sm">Expected ROI (3-5 years)</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-2xl font-bold text-blue-400">₹7,500 Cr</p>
+                                <p class="text-sm">Total Market Opportunity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Investment Ask -->
+        <section class="py-16 px-8">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-5xl font-bold mb-12 text-center"><span class="gradient-text">INVESTMENT ASK</span></h2>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="section-bg rounded-2xl p-8 glow-effect">
+                        <h3 class="text-3xl font-bold mb-6 text-center text-yellow-400">SERIES A FUNDING</h3>
+                        <div class="text-center mb-6">
+                            <p class="text-6xl font-black gradient-text">₹25 CRORE</p>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center p-3 bg-gray-800/50 rounded-lg">
+                                <span>Technology Development</span>
+                                <span class="font-bold text-blue-400">40% (₹10 Cr)</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-800/50 rounded-lg">
+                                <span>Market Expansion</span>
+                                <span class="font-bold text-green-400">30% (₹7.5 Cr)</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-800/50 rounded-lg">
+                                <span>Team Building</span>
+                                <span class="font-bold text-purple-400">20% (₹5 Cr)</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-800/50 rounded-lg">
+                                <span>Working Capital</span>
+                                <span class="font-bold text-yellow-400">10% (₹2.5 Cr)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="section-bg rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold mb-6 text-green-400">18-Month Milestones</h3>
+                        <div class="space-y-4">
+                            <div class="p-4 bg-green-900/20 rounded-lg">
+                                <h4 class="font-bold mb-2">6 Months</h4>
+                                <p class="text-sm text-gray-300">NCR Market Leadership, 5,000+ Properties</p>
+                            </div>
+                            <div class="p-4 bg-blue-900/20 rounded-lg">
+                                <h4 class="font-bold mb-2">12 Months</h4>
+                                <p class="text-sm text-gray-300">Mumbai/Bangalore Expansion, ₹25 Cr Revenue</p>
+                            </div>
+                            <div class="p-4 bg-purple-900/20 rounded-lg">
+                                <h4 class="font-bold mb-2">18 Months</h4>
+                                <p class="text-sm text-gray-300">Break-even Achievement, ₹50 Cr Run Rate</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 p-4 bg-yellow-900/30 rounded-lg text-center">
+                            <h4 class="font-bold text-lg mb-2">Exit Opportunity</h4>
+                            <p class="text-2xl font-bold text-yellow-400">₹1,000+ Cr Valuation</p>
+                            <p class="text-sm text-gray-300">IPO-ready in 3-4 years</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <div class="inline-block section-bg rounded-2xl px-12 py-8">
+                        <h3 class="text-2xl font-bold mb-4">Why Invest Now?</h3>
+                        <div class="grid grid-cols-3 gap-8">
+                            <div class="text-center">
+                                <i class="fas fa-rocket text-3xl text-blue-400 mb-2"></i>
+                                <h4 class="font-bold">First Mover</h4>
+                                <p class="text-sm text-gray-300">Agent incentivization breakthrough</p>
+                            </div>
+                            <div class="text-center">
+                                <i class="fas fa-users text-3xl text-green-400 mb-2"></i>
+                                <h4 class="font-bold">Perfect Team</h4>
+                                <p class="text-sm text-gray-300">Technology + Domain expertise</p>
+                            </div>
+                            <div class="text-center">
+                                <i class="fas fa-chart-line text-3xl text-yellow-400 mb-2"></i>
+                                <h4 class="font-bold">Massive Market</h4>
+                                <p class="text-sm text-gray-300">₹7,500 Cr opportunity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Next Steps -->
+        <section class="py-16 px-8">
+            <div class="max-w-6xl mx-auto text-center">
+                <h2 class="text-5xl font-bold mb-8"><span class="gradient-text">SPACEMATCH</span></h2>
+                <p class="text-3xl font-bold mb-12">Connecting Opportunity Through Intelligence</p>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="section-bg rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold mb-6 text-blue-400">Next Steps</h3>
+                        <ul class="space-y-3 text-left">
+                            <li><i class="fas fa-calendar text-green-400 mr-3"></i>Schedule technical deep-dive session</li>
+                            <li><i class="fas fa-chart-bar text-blue-400 mr-3"></i>Review detailed financial models</li>
+                            <li><i class="fas fa-handshake text-purple-400 mr-3"></i>Discuss strategic partnership terms</li>
+                            <li><i class="fas fa-rocket text-yellow-400 mr-3"></i>Begin pilot program planning</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="section-bg rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold mb-6 text-green-400">Contact Information</h3>
+                        <div class="space-y-3 text-left">
+                            <p><i class="fas fa-user text-blue-400 mr-3"></i><strong>Rohit Chopra:</strong> rohit@spacematch.ai</p>
+                            <p><i class="fas fa-user text-green-400 mr-3"></i><strong>Hitesh Sahni:</strong> hitesh@spacematch.ai</p>
+                            <p><i class="fas fa-globe text-purple-400 mr-3"></i><strong>Website:</strong> www.spacematch.ai</p>
+                            <p><i class="fas fa-phone text-yellow-400 mr-3"></i><strong>Phone:</strong> +91-9999-SPACEMATCH</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section-bg rounded-2xl px-12 py-8 glow-effect">
+                    <h3 class="text-4xl font-bold gradient-text mb-4">THE FUTURE OF COMMERCIAL REAL ESTATE</h3>
+                    <p class="text-2xl mb-6">STARTS TODAY</p>
+                    <p class="text-lg text-gray-300 italic">"We're not just building a platform. We're building the infrastructure of tomorrow's commercial real estate universe."</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Revenue Growth Chart
+        const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+        new Chart(revenueCtx, {
+            type: 'line',
+            data: {
+                labels: ['Year 1', 'Year 2', 'Year 3'],
+                datasets: [{
+                    label: 'Revenue (₹ Crore)',
+                    data: [10.5, 44, 135],
+                    borderColor: '#4facfe',
+                    backgroundColor: 'rgba(79, 172, 254, 0.1)',
+                    borderWidth: 3,
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#ffffff'
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            color: '#ffffff'
+                        },
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            color: '#ffffff'
+                        },
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Segment Revenue Chart
+        const segmentCtx = document.getElementById('segmentChart').getContext('2d');
+        new Chart(segmentCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Traditional Commercial (₹75 Cr)', 'Co-working Spaces (₹35 Cr)', 'Independent Offices (₹25 Cr)'],
+                datasets: [{
+                    data: [75, 35, 25],
+                    backgroundColor: [
+                        '#4facfe',
+                        '#00f2fe',
+                        '#9d50bb'
+                    ],
+                    borderWidth: 2,
+                    borderColor: '#1a1a2e'
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            color: '#ffffff',
+                            usePointStyle: true,
+                            padding: 20
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
